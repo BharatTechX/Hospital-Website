@@ -150,6 +150,7 @@ function Navbar() {
                         </li>
 
                         <Link className="nav-link text-dark" to="/gallery">Gallery</Link>
+                         <Link className="nav-link text-dark" to="/ourteam">Our Team</Link>
                         <li className="nav-item mt-3">
 
                             <Link className="nav-link text-dark" to="/Contact">
