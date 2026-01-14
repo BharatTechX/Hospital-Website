@@ -1,0 +1,15 @@
+body{
+    overflow-x: hidden;
+padding: 0px;
+margin: 0px;
+}
+span ::first-letter{
+font-size: 20px;
+    font-style: italic;
+
+
+}
+span{
+    color:rgb(246, 9, 9);
+}
+

@@ -1,0 +1,79 @@
+.Aboutcard {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+/* Responsive Image */
+.about-banner-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(4px);
+    z-index: 0;
+}
+.Aboutinner {
+  
+  z-index: 1 !important;  /* navbar se neeche */
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .about-banner-img {
+    height: 250px;
+    filter: blur(2px);
+  }
+
+  .Aboutinner p {
+    font-size: 1.5rem;
+  }
+
+  .Aboutinner .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+.form-control{
+
+width:200px;
+}
+.contactbackground{
+    background-color:lightpink;
+    border-radius: 30px;
+}
+
+.container-fluidee{
+    background-color: rgb(255, 69, 69);
+}
+
+
+.contactcard{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 16px;
+    color:black;
+    border: 2px solid red;
+    background-color: whitesmoke;
+    padding: 10px;
+    min-width: 370px;
+
+
+  
+    
+}
+span{
+color:red;
+}
+.Contact.light {
+  background-color: white !important;
+}
+
+.Contact.dark {
+  background-color: rgb(0, 0, 0) !important;
+  color: white;
+}

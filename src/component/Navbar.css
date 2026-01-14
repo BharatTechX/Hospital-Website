@@ -1,0 +1,164 @@
+.navbar {
+    width: 100%;
+    background-color: #f8f9fa;
+  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: top 0.3s ease;
+}
+
+
+.logo-title-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+.hospital-logo {
+    width: 80px;
+    height: auto;
+}
+
+
+.hospital-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hospital-title span {
+    color: #f90606;
+}
+
+
+.action-btn {
+    min-width: 100px;
+}
+
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+/* Offcanvas backdrop ka color transparent ya customized karna */
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.2); /* transparency kam kar di */
+}
+
+/* Agar bilkul hataana hai */
+/* .offcanvas-backdrop.show {
+    display: none;
+} */
+
+
+                    /* theme set css */
+
+
+/* Navbar background */
+.navbar.light {
+  background-color: white !important;
+  color:black!important;
+}
+
+.navbar.dark {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+/* Navbar ke andar ke sare anchors */
+.navbar.light   a {
+  color: black !important;
+  /* font-size: 20px; */
+  font-variant: small-caps;
+  
+}
+
+.navbar.dark  a  {
+  color: white !important;
+
+}
+
+.navbar.light a:hover{
+    /* box-shadow: 0px 1px 1px red; */
+    color: red !important;;
+
+}
+
+/* .navbar.dark .dropdown-menu  a {
+    color:black;
+    
+} */
+
+.navbar.dark .dropdown-menu a {
+    color: black!important; /* dark mode में link black */
+}
+
+/* अगर hover effect चाहिए */
+.navbar.dark .dropdown-menu a:hover {
+    color: red!important;
+    background-color: rgba(0, 0, 0, 0.826); /* hover पर अलग color */
+}
+
+
+
+.navbar.light .hospital-title {
+  color: black;
+}
+
+
+.navbar.dark .hospital-title {
+  color: white;
+}
+
+.navbar.dark .btn{
+    background-color: black;
+    color: white;
+}
+
+
+
+@media (max-width: 900px) {
+    .logo-title-btn {
+        flex-direction: column; /* logo upar, name niche */
+        align-items: flex-start;
+    }
+    .navbar{
+        position: sticky;
+        top: 0 !important;;
+    }
+
+   
+
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+/* Navbar links hover effect */
+
+    .hospital-logo {
+        width: 100px;
+    }
+
+    .hospital-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Extra small screens <=576px */
+@media (max-width: 576px) {
+    .hospital-logo {
+        width: 80px;
+    }
+
+    .hospital-title {
+        font-size: 1.1rem;
+    }
+
+   
+}

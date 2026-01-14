@@ -1,0 +1,392 @@
+
+.carousel-inner,
+img {
+  width: 100%;
+  height: 40%;
+  margin: auto;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-caption h2 {
+  font-size: 50px;
+  transition: all 0.4s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Overlay Layer */
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.4s ease;
+}
+
+/* Hover pe dark layer */
+.carousel-item:hover::after {
+  background: rgba(0, 0, 0, 0.623);
+}
+
+.carousel-caption {
+  margin-bottom: 10%;
+  font-size: 60px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .carousel-item::after {
+    background: none !important;
+    content: none !important;
+  }
+
+  .carousel-item img {
+    height: 45vh;
+  }
+
+  .carousel-caption {
+    bottom: 15%;
+    padding: 0 10px;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 40vh;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+}
+
+                               /* banner card */
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;        /* Banner height relative to viewport */
+  min-height: 400px;   /* Minimum height */
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Blur effect */
+.blur-image {
+  filter: blur(6px);   /* Adjust blur strength here */
+}
+
+/* Text overlay */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  width: 90%;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* makes text readable over blur */
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-text h2 {
+  font-size: 1.8rem;
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+ 
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text h2 {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* 📱 Mobile (max-width: 576px) */
+
+
+
+
+
+                   /* service part css */
+.card-hover {
+  position: relative;
+  color: black;
+  z-index: 1;
+
+  overflow: hidden;
+
+}
+
+.card-hover::before {
+
+
+  content: "";
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: red;
+  transition: 0.6s ease;
+  z-index: -1;
+}
+
+.card-hover:hover::before {
+  height: 100%;
+
+}
+
+
+
+.card-hover:hover {
+  color: white;
+
+}
+
+.cardimagehover {
+  overflow: hidden;
+  height: 200px;
+
+  margin-top: 20px;
+  border-radius: 20px;
+  
+}
+
+.cardimagehover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+  /* margin-top: 10px; */
+}
+
+
+.cardimagehover img:hover {
+  transform: scale(1.5);
+}
+
+
+
+
+
+
+
+.galleryimagee {
+    overflow: hidden;
+    width: 600px!important;          /* Full width in column */
+    max-width: 600px;    
+    height: 400px!important;        /* Base height */
+    border-radius: 15px;
+    margin: auto;         /* Center card in column */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.galleryimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.galleryimg:hover {
+    transform: scale(1.2);
+}
+
+                      /* theme set css */
+
+.Home.light {
+  background-color: white !important;
+}
+
+.Home.dark {
+  background-color: rgb(0, 0, 0) !important;
+  color: white;
+}
+
+.Home.dark.card-gallery-theme{
+
+  background-color: black;
+}
+
+.Home.dark .card {
+  background-color: #000; /* या कोई dark color */
+  color: #fff; /* text color */
+}
+
+/* सिर्फ light mode में hover red */
+.Home.light .card-hover::before {
+  background-color:rgb(209, 17, 17);
+}
+
+.Home.dark .card-hover::before {
+  background-color: rgb(201, 30, 30); /* dark mode में कोई overlay नहीं */
+}
+
+
+/* pupup side effect */
+/* CSS */
+.welcomeBox {
+  position: fixed;
+  right: -400px; /* hidden initially */
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(10deg, #1317f5e2, #f60e0edb);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  box-shadow: 0px 0px 10px 5px rgb(13, 0, 0);
+  transition: right 0.6s ease, opacity 0.5s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0; /* start invisible */
+}
+
+.welcomeBox.show {
+  right: 30px; /* slide in */
+  opacity: 1;
+}
+
+.welcomeBox .emoji {
+  font-size: 60px;
+  margin-left: 60px;
+}
+
+@media(max-width:700px){
+.welcomeBox{
+
+  visibility: hidden;
+}
+
+
+
+
+}
+
+
+
+/* Optional: text color for child elements */
+/* .Home.dark h1,
+.Home.dark h2,
+.Home.dark h5,
+.Home.dark p {
+  color: white !important;
+} */
+
+
+/* Navbar ke andar ke sare anchors */
+/* .Home.light    {
+  color: black !important;
+}
+
+.Home.dark   {
+  color: white !important;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .galleryimagee {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galleryimagee {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .galleryimagee {
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .carousel-caption {
+    top: 30%;
+    /* ऊपर का space adjust */
+    padding: 0 10px;
+    /* side padding */
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+    /* small screen heading */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-caption button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}

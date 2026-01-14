@@ -1,0 +1,189 @@
+.Aboutcard {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Responsive Image */
+.about-banner-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(5px);
+  z-index: 0;
+}
+
+/* Centered text */
+.Aboutinner {
+  z-index: 1 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .about-banner-img {
+    height: 250px;
+    filter: blur(2px);
+
+  }
+
+  .Aboutinner p {
+    font-size: 1.5rem;
+    color: black;
+  }
+
+  .Aboutinner .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/* .galleryimage {
+    width: 300px!important;
+    height: 300px!important;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+} */
+
+
+
+
+.galleryimagee {
+    overflow: hidden;
+    width: 300px!important;          /* Full width in column */
+    /* max-width: 600px;     Limit large screens */
+    height: 300px!important;        /* Base height */
+    border-radius: 15px;
+    margin: auto;         /* Center card in column */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.galleryimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .galleryimagee {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galleryimagee {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .galleryimagee {
+        height: 200px;
+    }
+}
+
+/* IMAGE */
+
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 32, 32, 0.6);
+    color: white;
+
+    display: flex;
+    flex-direction: column;  /* text + icons vertical */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    transition: all .5s ease-in-out;
+}
+
+/* Image zoom */
+.galleryimage:hover .galleryimg {
+    transform: scale(1.5);
+}
+
+/* Overlay slide from bottom */
+.galleryimage:hover .overlay {
+    bottom: 0;
+}
+
+
+
+/* iconhover css */
+
+
+
+.iconhover svg,
+.iconhover2 svg,
+.iconhover3 svg{
+    transition: 0.4s ease;
+    color: white;
+}
+
+
+.iconhover2:hover svg {
+      background-color: white;
+    border-radius: 10px;
+    color: #33c1ff;
+    
+    transition: 0.4s ease;
+
+}
+.iconhover:hover svg {
+      background-color: white;
+    border-radius: 10px;
+    color: rgba(72, 234, 72, 0.821);
+    
+    transition: 0.4s ease;
+
+}
+.iconhover3:hover svg {
+      background-color: white;
+    border-radius: 10px;
+    color: rgb(235, 64, 138);
+    
+    transition: 0.4s ease;
+
+}
+
+
+
+.Gallery.light {
+  background-color: white !important;
+}
+
+.Gallery.dark {
+  background-color: rgb(0, 0, 0) !important;
+  color: white;
+}
+
+
+@media (max-width:900px){
+.Aboutinner,p{
+    font-size: 1.9rem;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+
+
+}
+
+

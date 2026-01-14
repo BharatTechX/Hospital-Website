@@ -1,0 +1,142 @@
+
+
+.Aboutcard {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-banner-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(4px);
+}
+
+.Aboutinner {
+  z-index: -1;
+
+  
+}
+
+@media (max-width: 768px) {
+  .about-banner-img {
+    height: 250px;
+    filter: blur(2px);
+  }
+
+  .Aboutinner p {
+    font-size: 1.5rem;
+  }
+
+  .Aboutinner .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+.doctor-img {
+   width: 250px;
+   height: 300px;
+   object-fit: cover;
+   object-position: top;
+   border-radius: 20px; /* optional */
+   margin: auto;
+   display: block;
+   padding-top: 10px;
+
+  
+}
+
+
+.doctor-image {
+   width: 200px;
+   height:300px;
+   object-fit: cover;
+   object-position: top;
+   border-radius: 10px; /* optional */
+   
+   
+    display: flex; 
+   justify-content: center;
+   align-items: first baseline;
+    
+}
+
+.doctor1{
+   height: 200px;
+}
+
+.cardmain {
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.cardmain:hover {
+    transform: translatey(-30px);
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+    border-radius: 5%;
+    
+}
+.OurTeam.light {
+  background-color: white !important;
+}
+
+.OurTeam.dark {
+  background-color: rgb(0, 0, 0) !important;
+  color: white;
+}
+
+
+.cardmain {
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Light Mode Hover */
+.OurTeam.light .cardmain:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+}
+
+/* Dark Mode Hover */
+.OurTeam.dark .cardmain:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.5); /* Neon glow */
+    background: #1a1a1a;
+    color: white;
+}
+
+/* Extra polish for card content in dark mode */
+.OurTeam.dark .cardmain {
+    background: #111;
+    color: white;
+}
+
+.OurTeam.dark .cardmain .card-subtitle {
+    color: #ccc !important;
+}
+/* LIGHT MODE CARD */
+.OurTeam.light .cardmain {
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+/* DARK MODE CARD */
+.OurTeam.dark .cardmain {
+    background: #000000;      /* black card background */
+    border-radius: 20px;
+}
+
+/* DARK MODE CARD HOVER */
+.OurTeam.dark .cardmain:hover {
+    background: #0d0d0d;      /* slightly lighter black on hover */
+    box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.4); /* neon glow */
+}
+
+
+

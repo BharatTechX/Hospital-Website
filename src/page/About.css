@@ -1,0 +1,58 @@
+.Aboutcard {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+/* Responsive Image */
+.about-banner-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(4px);
+    z-index: 0;
+}
+.Aboutinner {
+  
+  z-index: 1 !important;  /* navbar se neeche */
+}
+
+
+
+.About.light {
+  background-color: white !important;
+}
+
+.About.dark {
+  background-color: rgb(0, 0, 0) !important;
+  /* color: white; */
+}
+
+
+/* Dark theme applied to card inside About */
+.About.dark .card {
+  background-color: #000; /* या कोई dark color */
+  color: #fff; /* text color */
+}
+
+
+
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .about-banner-img {
+    height: 250px;
+    filter: blur(2px);
+  }
+
+  .Aboutinner p {
+    font-size: 1.5rem;
+  }
+
+  .Aboutinner .nav-link {
+    font-size: 1.1rem;
+  }
+}
