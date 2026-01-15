@@ -104,13 +104,15 @@ function Navbar() {
                     </ul>
 
 
-                    <button type="button" class="btn btn-primary" onClick={toggleTheme} data-aos="fade-down" >
+                   <button
+  type="button"
+  className="btn btn-primary hidden-btn d-none d-lg-inline-block"
+  onClick={toggleTheme}
+  data-aos="fade-down"
+>
+  {theme === "light" ? " 🌙 Dark Mode " : "🌞 Light Mode"}
+</button>
 
-                        {/* {theme === "light" ? "Light Mode" : "Dark Mode"} */}
-
-                        {theme === "light" ? " 🌙 Dark Mode " : "🌞 Light Mode"}
-
-                    </button>
                 </div>
 
 
@@ -120,7 +122,16 @@ function Navbar() {
             {/* Offcanvas sidebar for small screens */}
             <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasNavbar">
                 <div className="offcanvas-header">
-                    <h5 className="offcanvas-title">Side Bar Menu</h5>
+                       <div className="d-flex flex-column flex-md-row align-items-center gap-2 ">
+                        <img
+                            src={logo}   // <-- React में public file ऐसे call होती है
+                            alt="logo"
+                            className="hospital-logo"
+                        />
+                        <h1 className="fw-bold  fs-1 hospital-title">
+                            <span>Shiva</span> Hospital
+                        </h1>
+                    </div>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
@@ -155,7 +166,15 @@ function Navbar() {
 
                             <Link className="nav-link text-dark" to="/Contact">
 
-                                <button className="btn btn-danger">Contact</button></Link>
+                                <button className="btn btn-danger ">Contact</button></Link>
+                                
+                                    <button type="button" className="btn btn-primary mt-3" onClick={toggleTheme} >
+
+                        {/* {theme === "light" ? "Light Mode" : "Dark Mode"} */}
+
+                        {theme === "light" ? " 🌙 Dark Mode " : "🌞 Light Mode"}
+
+                    </button>
 
                         </li>
                     </ul>
